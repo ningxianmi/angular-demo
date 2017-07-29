@@ -1,0 +1,63 @@
+@import "../variable";
+.twoRouting{
+
+}
+.navigation{
+  width: 100%;
+  height: 70px;
+  background-color:@navBarColor;
+  a.logo{
+    float: left;
+    display: block;
+    height: 100%;
+    padding-left: 30px;
+    text-align: center;
+    span{
+      height: 100%;
+      display:inline-block;
+      vertical-align: middle;
+    }
+    img{
+      vertical-align: middle;
+    }
+  }
+  ul.menuOne{
+    float: left;
+    margin-left: 70px;
+    >li{
+      float: left;
+      padding: 0 30px;
+      line-height: 70px;
+      position: relative;
+      cursor: pointer;
+      span{
+        display: block;
+        transition:all .3s;
+        color: @white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &:hover span{
+        transition:all .3s;
+        color: @fontHover;
+      }
+      .active{
+        color:@fontHover;
+      }
+    }
+  }
+  .navRight{
+    float: right;
+    margin-right: 70px;
+    span{
+      line-height: 70px;
+      padding: 0 10px;
+      color:@white ;
+    }
+    .change{
+      border-left: 2px solid @white;
+      border-right: 2px solid @white;
+    }
+  }
+}
+

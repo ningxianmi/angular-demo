@@ -1,0 +1,32 @@
+@import "../variable";
+
+
+.row{ }
+.row:after {
+  clear: both;
+}
+.loop(@counter,@class) when (@counter > 0) {
+  .col-@{class}-@{counter}{
+    display: block;
+    float: left;
+    width: unit(@counter/@gridNumber*100, %);
+  }
+  .loop((@counter - 1),@class);
+}
+
+/*xs*/
+@media (min-width: @screen-xs) {
+  .loop(@gridNumber,xs)
+}
+/*sm*/
+@media (min-width: @screen-sm) {
+  .loop(@gridNumber,sm)
+}
+/*md*/
+@media (min-width: @screen-md) {
+  .loop(@gridNumber,md)
+}
+/*lg*/
+@media (min-width: @screen-lg) {
+  .loop(@gridNumber,lg)
+}

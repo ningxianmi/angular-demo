@@ -1,0 +1,156 @@
+@import "../variable";
+*, :after, :before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0}
+html { height: 100%; width: 100%; font-size: 12px; background: #FFF; }
+body {font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+  height: 100%; width: 100%; overflow-y: auto; overflow-x: hidden; margin: 0; line-height: 1.42857143; color: #8f8f8f }
+ul { list-style-type: none; margin: 0; padding: 0 }
+h1, h2, h3, h4, h5, h6, li, p { margin: 0; padding: 0; font-size: 1em; font-style: normal; font-weight: normal }
+a,b,i,img{font-weight: normal; font-style: normal;display: inline-block}
+i{ font-style: normal}
+textarea{resize: none;}
+input,button,select,textarea{outline:none; font-size: 1em;cursor: pointer}
+a, a:link, a:visited { color: #666; text-decoration: none }
+ul,li{ list-style-type: none; margin: 0; padding: 0 }
+
+body{color: @textColor;}
+.pull-right { float: right !important }
+.pull-left { float: left !important }
+.hide { display: none }
+.show { display: block}
+.clear { overflow:auto;zoom:1;clear: both}
+.clear2{clear: both}
+.clear:after,.clear2:after { content: " "; height: 0; width: 0; visibility: hidden;
+  display: block; clear: both }
+
+.overflow { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.text-center{ text-align: center}
+.text-left{ text-align: left}
+.text-right{ text-align: right;}
+.cursorP{cursor: pointer}
+.middle{ display: table;
+  >div{ display: table-cell; vertical-align: middle;}
+}
+.no-select{-webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+ul{ list-style-type: none; padding: 0; margin: 0;}
+input,textarea,button,select,input[type=radio]{outline:none}
+/* 公用的样式------------------------ */
+.changeBox{
+  padding-left: 200px;
+  width: 100%;
+}
+.mainBox{
+  padding: 20px;
+}
+.mainTitle{
+  width: 100%;
+  text-align: center;
+  font-size:2rem;
+  padding:1% 0;
+  border-bottom: 1px solid #777;
+  margin: 0 auto;
+}
+.marginTop{
+  margin-top: 2%;
+  text-align: center;
+  div{
+    margin: 10px 0;
+  }
+}
+table{
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  display: table;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: center;
+  caption{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #777;
+    display: table-caption;
+  }
+  thead{
+    th{
+      vertical-align: bottom;
+      border: 1px solid #ddd;
+      padding: 8px;
+      line-height: 1.42857143;
+    }
+  }
+  tbody{
+    td{
+      padding: 8px;
+      line-height: 1.42857143;
+      vertical-align: top;
+      border: 1px solid #ddd;
+      display: table-cell;
+    }
+  }
+}
+label.label{
+  padding-right:10px;
+  line-height: 34px;
+  font-size: 16px;
+  vertical-align: top;
+}
+input.input{
+  width: 50%;
+  height: 34px;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.6s;
+}
+select,textarea{
+  width: 50%;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  color: #555;
+  border-radius: 4px;
+}
+textarea{
+  height: 120px;
+}
+input:focus{
+  border-color: @fontHover;
+  box-shadow: 0 0 8px @fontHover
+}
+.btn{
+  display: inline-block;
+  padding: 10px 100px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.group{
+  overflow: auto;
+  padding: 30px 0;
+}
+.textCenter{
+  text-align: center;
+}
+
+/* 页面切换默认动画------------------------ */
+.ng-enter { z-index: 4; position: absolute; background: none; }
+.ng-leave { z-index: 4; position: absolute; background: none; }
+.ng-enter.minView { animation: zoomIn 0.5s both ease-in 0.3s; }
+.ng-leave.minView { animation: zoomOut 0.5s both ease-in; }
+.ng-enter.bigView { animation: zoomInDown 0.5s both ease-in 0.5s; }
+.ng-leave.bigView { animation: zoomOutDown 0.5s both ease-in; }
